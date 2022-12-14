@@ -1,16 +1,17 @@
-﻿using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
-using System;
-using System.Text;
+﻿using System;
 
 class Receive
 {
     public static void Main()
     {
-        // Basic.basic();
+        Basic.basic();
         // Work_Queue.workQueue();
-        Subscribe.subscribe();
-        Second_Subscriber.secondSubscriber();
+        // FanoutSubscriber1.Subscribe();
+        // FanoutSubscriber2.Subscribe();
+        // DirectSubscriber1.Subscribe();
+        // DirectSubscriber2.Subscribe();
+        // DeadLetterExchange.publish();
+        // AlternateExchange.publish();
         Console.ReadKey();
     }
 }

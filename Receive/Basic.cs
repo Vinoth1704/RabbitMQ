@@ -7,10 +7,10 @@ class Basic
     public static void basic()
     {
         var factory = new ConnectionFactory() { HostName = "localhost" };
-        using (var connection = factory.CreateConnection())
-        using (var channel = connection.CreateModel())
+        var connection = factory.CreateConnection();
+        var channel = connection.CreateModel();
         {
-            channel.QueueDeclare(queue: "hello",
+            channel.QueueDeclare(queue: "basic",
                                  durable: false,
                                  exclusive: false,
                                  autoDelete: false,
@@ -21,13 +21,12 @@ class Basic
             {
                 var body = ea.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
-                Console.WriteLine(" [x] Received {0}", message);
+                Console.WriteLine($"Received {message}");
             };
-            channel.BasicConsume(queue: "hello",
+            channel.BasicConsume(queue: "basic",
                                  autoAck: true,
                                  consumer: consumer);
-
-            Console.WriteLine(" Press [enter] to exit.");
+            Console.WriteLine("Waiting for the message...");
             Console.ReadLine();
         }
     }

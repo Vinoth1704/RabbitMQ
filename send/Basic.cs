@@ -6,26 +6,24 @@ class Basic
     public static void basic()
     {
         var factory = new ConnectionFactory() { HostName = "localhost" };
-        using (var connection = factory.CreateConnection())
-        using (var channel = connection.CreateModel())
-        {
-            channel.QueueDeclare(queue: "hello",
-                                 durable: false,
-                                 exclusive: false,
-                                 autoDelete: false,
-                                 arguments: null);
+        var connection = factory.CreateConnection();
+        var channel = connection.CreateModel();
 
-            string message = "Hello World!";
-            var body = Encoding.UTF8.GetBytes(message);
+        channel.QueueDeclare(queue: "basic",
+                             durable: false,
+                             exclusive: false,
+                             autoDelete: false,
+                             arguments: null);
 
-            channel.BasicPublish(exchange: "",
-                                 routingKey: "hello",
-                                 basicProperties: null,
-                                 body: body);
-            Console.WriteLine(" [x] Sent {0}", message);
-        }
+        string message = "Basic Operation";
+        var body = Encoding.UTF8.GetBytes(message);
 
-        Console.WriteLine(" Press [enter] to exit.");
+        channel.BasicPublish(exchange: "",
+                             routingKey: "basic",
+                             basicProperties: null,
+                             body: body);
+        Console.WriteLine($"Sent {message}");
+
         Console.ReadLine();
     }
 }

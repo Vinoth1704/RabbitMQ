@@ -2,26 +2,25 @@ using System.Text;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-class Second_Subscriber
+class DirectSubscriber2
 {
-    public static void secondSubscriber()
+    public static void Subscribe()
     {
         var factory = new ConnectionFactory() { HostName = "localhost" };
-        using var connection = factory.CreateConnection();
-        using var channel = connection.CreateModel();
-        channel.ExchangeDeclare(exchange: "pub/sub", ExchangeType.Fanout);
+        var connection = factory.CreateConnection();
+        var channel = connection.CreateModel();
 
+        //Direct Method
+        channel.ExchangeDeclare(exchange: "Direct", ExchangeType.Direct);
         var queueName = channel.QueueDeclare().QueueName;
-
-        channel.QueueBind(queue: queueName, exchange: "pub/sub", routingKey: "");
+        channel.QueueBind(queue: queueName, exchange: "Direct", routingKey: "Second");
 
         var consumer = new EventingBasicConsumer(channel);
-
         consumer.Received += (model, ea) =>
         {
             var body = ea.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
-            Console.WriteLine("2nd Consumer : " + message);
+            Console.WriteLine("2nd Consumer received " + message);
         };
 
         channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);

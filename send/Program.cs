@@ -3,9 +3,12 @@ class Send
 {
     public static void Main()
     {
-        // Basic.basic();
+        Basic.basic();
         // Work_Queue.workQueue();
-        Publish.publish();
+        // DirectExchange.publish();
+        // FanoutExchange.publish();
+        // DeadLetterExchange.publish();
+        // AlternateExchange.publish();
         Console.ReadKey();
     }
 }

@@ -16,7 +16,7 @@ class Work_Queue
                                  autoDelete: false,
                                  arguments: null);
 
-            channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+            channel.BasicQos(prefetchSize: 0, prefetchCount: 0, global: false);
 
             var consumer = new EventingBasicConsumer(channel);
             var random = new Random();
