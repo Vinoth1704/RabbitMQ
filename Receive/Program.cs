@@ -4,7 +4,7 @@ class Receive
 {
     public static void Main()
     {
-        Basic.basic();
+        // Basic.basic();
         // Work_Queue.workQueue();
         // FanoutSubscriber1.Subscribe();
         // FanoutSubscriber2.Subscribe();
@@ -12,6 +12,7 @@ class Receive
         // DirectSubscriber2.Subscribe();
         // DeadLetterExchange.publish();
         // AlternateExchange.publish();
+        AcceptReject.publish();
         Console.ReadKey();
     }
 }
