@@ -15,3 +15,4 @@ C:\Users\vinoth.jayakumar\Documents\GITHUB\RabbitMQ\receive\obj\Debug\net6.0\ref
 C:\Users\vinoth.jayakumar\Documents\GITHUB\RabbitMQ\receive\obj\Debug\net6.0\Receive.pdb
 C:\Users\vinoth.jayakumar\Documents\GITHUB\RabbitMQ\receive\obj\Debug\net6.0\Receive.genruntimeconfig.cache
 C:\Users\vinoth.jayakumar\Documents\GITHUB\RabbitMQ\receive\obj\Debug\net6.0\ref\Receive.dll
+C:\Users\vinoth.jayakumar\Documents\GITHUB\RabbitMQ\receive\bin\Debug\net6.0\Polly.dll
