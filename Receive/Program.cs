@@ -8,11 +8,11 @@ class Receive
         // Work_Queue.workQueue();
         // FanoutSubscriber1.Subscribe();
         // FanoutSubscriber2.Subscribe();
-        // DirectSubscriber1.Subscribe();
+        DirectSubscriber1.Subscribe();
         // DirectSubscriber2.Subscribe();
         // DeadLetterExchange.publish();
         // AlternateExchange.publish();
-        AcceptReject.publish();
+        // AcceptReject.publish();
         Console.ReadKey();
     }
 }

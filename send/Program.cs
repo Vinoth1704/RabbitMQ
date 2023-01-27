@@ -5,11 +5,11 @@ class Send
     {
         // Basic.basic();
         // Work_Queue.workQueue();
-        // DirectExchange.publish();
+        DirectExchange.publish();
         // FanoutExchange.publish();
         // DeadLetterExchange.publish();
         // AlternateExchange.publish();
-        AcceptReject.publish();
+        // AcceptReject.publish();
         Console.ReadKey();
     }
 }
