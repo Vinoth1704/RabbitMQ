@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vinoth.jayakumar\\Documents\\GITHUB\\RabbitMQ\\Receive\\Receive.csproj": {}
+    "C:\\Users\\vinoth.jayakumar\\Documents\\GITHUB\\RabbitMQ\\receive\\Receive.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vinoth.jayakumar\\Documents\\GITHUB\\RabbitMQ\\Receive\\Receive.csproj": {
+    "C:\\Users\\vinoth.jayakumar\\Documents\\GITHUB\\RabbitMQ\\receive\\Receive.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinoth.jayakumar\\Documents\\GITHUB\\RabbitMQ\\Receive\\Receive.csproj",
+        "projectUniqueName": "C:\\Users\\vinoth.jayakumar\\Documents\\GITHUB\\RabbitMQ\\receive\\Receive.csproj",
         "projectName": "Receive",
-        "projectPath": "C:\\Users\\vinoth.jayakumar\\Documents\\GITHUB\\RabbitMQ\\Receive\\Receive.csproj",
+        "projectPath": "C:\\Users\\vinoth.jayakumar\\Documents\\GITHUB\\RabbitMQ\\receive\\Receive.csproj",
         "packagesPath": "C:\\Users\\vinoth.jayakumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinoth.jayakumar\\Documents\\GITHUB\\RabbitMQ\\Receive\\obj\\",
+        "outputPath": "C:\\Users\\vinoth.jayakumar\\Documents\\GITHUB\\RabbitMQ\\receive\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vinoth.jayakumar\\AppData\\Roaming\\NuGet\\NuGet.Config"
