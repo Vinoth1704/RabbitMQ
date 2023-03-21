@@ -4,7 +4,6 @@
 using System.Text;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-
 public class RPC
 {
     public static void RPCServer()
