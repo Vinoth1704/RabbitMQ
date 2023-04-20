@@ -10,7 +10,7 @@ class Work_Queue
         var channel = connection.CreateModel();
         {
             channel.QueueDeclare(queue: "hello",
-                                 durable: false,
+                                 durable: true,
                                  exclusive: false,
                                  autoDelete: false,
                                  arguments: null);
@@ -27,7 +27,7 @@ class Work_Queue
                                      basicProperties: null,
                                      body: body);
                 Console.WriteLine($" Sending message Id:{messageId}");
-                Task.Delay(TimeSpan.FromSeconds(publishingTime)).Wait();
+                Task.Delay(TimeSpan.FromSeconds(2)).Wait();
                 messageId++;
             }
         }

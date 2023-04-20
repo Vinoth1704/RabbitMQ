@@ -2,8 +2,8 @@
 {
     public static void Main()
     {
-        Basic.basic();
-        // Work_Queue.workQueue();
+        // Basic.basic();
+        Work_Queue.workQueue();
         // DirectExchange.publish();
         // FanoutExchange.publish();
         // DeadLetterExchange.publish();

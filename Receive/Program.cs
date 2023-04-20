@@ -4,8 +4,8 @@ class Receive
 {
     public static void Main()
     {
-        Basic.basic();
-        // Work_Queue.workQueue();
+        // Basic.basic();
+        Work_Queue.workQueue();
         // FanoutSubscriber1.Subscribe();
         // FanoutSubscriber2.Subscribe();
         // DirectSubscriber1.Subscribe();

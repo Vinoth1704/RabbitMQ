@@ -11,12 +11,12 @@ class Work_Queue
         var channel = connection.CreateModel();
         {
             channel.QueueDeclare(queue: "hello",
-                                 durable: false,
+                                 durable: true,
                                  exclusive: false,
                                  autoDelete: false,
                                  arguments: null);
 
-            channel.BasicQos(prefetchSize: 0, prefetchCount: 0, global: false);
+            channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
 
             var consumer = new EventingBasicConsumer(channel);
             var random = new Random();
